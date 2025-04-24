@@ -11,7 +11,7 @@ import {
 } from "botbuilder";
 
 // This bot's main dialog.
-import { TeamsBot } from "./teamsBot";
+import { DifyBot } from "./difyBot";
 import config from "./config";
 
 // Create adapter.
@@ -52,7 +52,8 @@ const onTurnErrorHandler = async (context: TurnContext, error: Error) => {
 adapter.onTurnError = onTurnErrorHandler;
 
 // Create the bot that will handle incoming messages.
-const bot = new TeamsBot();
+// const bot = new LangGraphBot();
+const bot = new DifyBot();
 
 // Create express application.
 const expressApp = express();

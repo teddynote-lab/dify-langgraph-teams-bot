@@ -6,7 +6,7 @@ const DIFY_BASE_URL = "https://api.dify.ai/v1";
 
 const conversationDB = {};
 
-export class TeamsBot extends TeamsActivityHandler {
+export class DifyBot extends TeamsActivityHandler {
   constructor() {
     super();
     this.onMessage(async (context, next) => {
@@ -44,7 +44,6 @@ export class TeamsBot extends TeamsActivityHandler {
           input: response.data,
         });
         let buffer = "";
-
 
         // 타이핑 인디케이터를 주기적으로 보내기 위한 타이머 설정
         const typingInterval = setInterval(async () => {
@@ -113,7 +112,7 @@ export class TeamsBot extends TeamsActivityHandler {
       for (let cnt = 0; cnt < membersAdded.length; cnt++) {
         if (membersAdded[cnt].id) {
           await context.sendActivity(
-            `안녕하세요! 저는 Dify AI를 사용하는 Teams 봇입니다. 무엇이든 질문해주세요.`
+            `안녕하세요! 저는 Dify 봇입니다. 무엇이든 질문해주세요.`
           );
           break;
         }
