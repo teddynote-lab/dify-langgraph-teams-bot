@@ -57,7 +57,7 @@ export class DifyBot extends TeamsActivityHandler {
         await context.sendActivity({ type: "typing" });
 
         // 첨부 파일을 Dify 파일 형식으로 변환
-        const files = context.activity.attachments
+        const files = (context.activity.attachments ?? [])
           .filter((attachment) =>
             attachment.contentType.startsWith(
               "application/vnd.microsoft.teams.file.download.info"
@@ -149,7 +149,7 @@ export class DifyBot extends TeamsActivityHandler {
           reply.attachments = responseFiles.map((file) => {
             return {
               contentType:
-                file.type + new URL(file.url).pathname.split(".").pop(),
+                file.type + "/" + new URL(file.url).pathname.split(".").pop(),
               contentUrl: file.url,
             };
           });

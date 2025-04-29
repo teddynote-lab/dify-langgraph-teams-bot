@@ -53,7 +53,7 @@ export class LangGraphBot extends TeamsActivityHandler {
         }
 
         // Process file attachments
-        const files = context.activity.attachments
+        const files = (context.activity.attachments ?? [])
           .filter((attachment) =>
             attachment.contentType.startsWith(
               "application/vnd.microsoft.teams.file.download.info"

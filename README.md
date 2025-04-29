@@ -41,16 +41,26 @@ cd dify-langgraph-teams-bot
 
 루트 디렉토리의 `.localConfigs.example` 을 복사해서 `.localConfigs` 파일로 만들어주세요.
 
+```
+# Config 가능한 값들
+DIFY_API_KEY=app-XXXXXXXXXXXXXXXXXXXX
+DIFY_ENDPOINT=https://api.dify.ai/v1
+
+LANGGRAPH_API_KEY=
+LANGGRAPH_ENDPOINT=http://localhost:2024
+LANGGRAPH_ASSISTANT_ID=agent
+```
+
 ### 프로젝트 열기
 
 > Teams Toolkit CLI를 사용한 로컬 디버깅을 위해서는 [Teams Toolkit CLI 로컬 디버깅 설정](https://aka.ms/teamsfx-cli-debugging)에 설명된 추가 단계가 필요합니다.
 
 1. 먼저 VS Code 툴바 왼쪽의 Teams Toolkit 아이콘을 선택합니다.
-2. F5를 눌러 디버깅을 시작하면 웹 브라우저를 사용하여 Teams App Test Tool에서 앱이 실행됩니다. `Debug in Test Tool`을 선택하세요.
-3. 브라우저가 팝업되어 Teams App Test Tool이 열립니다.
-4. 봇으로부터 환영 메시지를 받게 되며, 봇에 아무 메시지나 보내면 에코 응답을 받을 수 있습니다.
+2. F5를 눌러 팝업창이 뜨면 `Debug in Teams` 를 선택하세요. 본인의 디버깅 환경에 맞게 Chrome, Edge, Desktop 중 선택 가능합니다.
+3. 브라우저(또는 데스크탑앱)가 팝업되어 Teams App 이 열립니다.
+4. 봇으로부터 환영 메시지를 받게 되며, 봇에 메시지를 보내면 응답을 받을 수 있습니다.
 
-**축하합니다**! 이제 Teams App Test Tool에서 사용자와 상호작용할 수 있는 애플리케이션이 실행 중입니다:
+**축하합니다**! 이제 Teams App 에서 사용자와 상호작용할 수 있는 애플리케이션이 실행 중입니다:
 
 ![basic bot](https://github.com/OfficeDev/TeamsFx/assets/9698542/bdf87809-7dd7-4926-bff0-4546ada25e4b)
 
