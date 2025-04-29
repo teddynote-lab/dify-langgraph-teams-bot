@@ -11,6 +11,16 @@ Dify 와 LangGraph API 를 Teams 에 통합하는 유스케이스
 - LangGraph 이미지 생성
   ![](./assets/langgraph-image-create.png)
 
+## 프로젝트 구조
+
+```mermaid
+graph LR
+  A[유저의 채팅] --> B[Teams Bot 프로그램]
+  B -->|Dify API 요청| C[Dify]
+  C -->|응답 결과| B
+  B -->|유저에게 답변| A
+```
+
 ## 기본 봇 템플릿 시작하기
 
 > **필수 조건**
