@@ -6,6 +6,7 @@
 .notification.localstore.json
 .notification.testtoolstore.json
 .vscode
+assets
 *.js.map
 *.ts.map
 *.ts

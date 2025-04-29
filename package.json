@@ -23,6 +23,7 @@
         "url": "https://github.com"
     },
     "dependencies": {
+        "@langchain/langgraph-sdk": "^0.0.70",
         "botbuilder": "^4.23.1",
         "dify-client": "^2.3.2",
         "express": "^5.0.1"
